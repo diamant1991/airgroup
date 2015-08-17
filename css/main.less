@@ -1,11 +1,11 @@
 
 @red: #ed1c24;
 @grey: #5c5656;
+
 .cell{
 	display: table-cell;
 	vertical-align: middle;
 }
-
 
 .container{
 	width: 1000px;
@@ -17,6 +17,14 @@ a{
 
 .header{
 	font-family: 'helveticaneuecyrlight';
+	position: relative;
+	z-index: 1111;
+}
+
+
+.slider-wrapper{
+	width: 100%;
+	min-width: 1000px;
 }
 
 .top-panel{
@@ -86,6 +94,11 @@ a{
 	-webkit-box-shadow: -1px 3px 7px 0px rgba(0, 0, 0, 0.06);
 	-moz-box-shadow:    -1px 3px 7px 0px rgba(0, 0, 0, 0.06);
 	box-shadow:         -1px 3px 7px 0px rgba(0, 0, 0, 0.06);
+
+		.container{
+			position: relative;
+			z-index: 2;
+		}
 }
 .nav{
 	margin-left: 305px;
@@ -97,6 +110,7 @@ a{
 				float: left;
 				width: 16.6%;
 				text-align: center;
+				font-size: 15px;
 
 					&:first-child{
 						width: 14%;
@@ -111,29 +125,113 @@ a{
 						display: table-cell;
 						vertical-align: middle;
 						cursor: default;
-						background: url(../images/drop.png)no-repeat 100%;
+						position: relative;
+						z-index: 3;
+						background: url(../images/drop.png)no-repeat 95%;
 						-webkit-transition: all 0.2s ease;
 						-moz-transition:    all 0.2s ease;
 						transition:         all 0.2s ease;
 
-							&:hover{
-								color: @red;
-								background: url(../images/drop-a.png)no-repeat 100%;
-							}
+					}
+					&:hover > a{
+						color: #ed1c24;
+    					background: #fff url(../images/drop-a.png) no-repeat 95%;
+					}
+					&:hover{
+						-webkit-box-shadow: 0 0 10px rgba(0,0,0,0.25);
+							-moz-box-shadow: 0 0 10px rgba(0,0,0,0.25);
+							     box-shadow: 0 0 10px rgba(0,0,0,0.25);
+					}
+					&:hover .dropdown-menu{
+						visibility: visible;
+						opacity: 1;
+						-webkit-transition-delay: 0s;
+							-moz-transition-delay: 0s;
+								-o-transition-delay: 0s;
+									transition-delay: 0s;
+						 -webkit-transition-property: none;
+							 -moz-transition-property: none;
+                        -o-transition-property: none;
+                           transition-property: none;
 					}
 			}
 		}
 }
 
+.dropdown-menu{
+	position: absolute;
+	z-index: 2;
+	left: 0;
+	padding: 25px 0;
+	padding-right: 20px;
+	background-color: #fff;
+	white-space: normal;
+	text-align: left;
+	-webkit-box-shadow: 0 0 10px rgba(0,0,0,0.25);
+		-moz-box-shadow: 0 0 10px rgba(0,0,0,0.25);
+	        box-shadow: 0 0 10px rgba(0,0,0,0.25);
+    opacity: 0;
+    right: 0;
+    visibility: hidden;
+    width: auto;
+    min-width: 100%;
+    -moz-transition: visibility 0s linear 0.1s,opacity 0.1s linear;
+    -o-transition: visibility 0s linear 0.1s,opacity 0.1s linear;
+    -webkit-transition: visibility 0s linear,opacity 0.1s linear;
+    -webkit-transition-delay: 0.1s,0s;
+    transition: visibility 0s linear 0.1s,opacity 0.1s linear;
+
+	   > li{
+	   	float: left;
+	   	width: 25%;
+	   	padding-left: 20px;
+	   }
+	   a{
+	   	color: #5c5656;
+	   	font-size: 12px;
+	   	text-transform: uppercase;
+	   	display: inline-block;
+
+	   		&:hover{
+	   			color: @red;
+	   		}
+	   }
+	   .title-h5{
+	   	font-size: 16px;
+	   	color: #000;
+	   	text-transform: none;
+	   }
+}
+.third-level li{
+	margin-bottom: 6px;
+}
+.drop-img{
+	width: 100%;
+	height: 60px;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: 50%;
+	margin-bottom: 20px;
+
+}
+
 .slide-caption{
+	position: absolute;
+	width: 1000px;
+	z-index: 10;
+	left: 50%;
+	top: 50%;
+	margin-left: -500px;
+	margin-top: -92.5px;
+}
+
+.caption-text{
 	width: 410px;
 	height: 185px;
 	background-color: @red;
 	position: absolute;
 	z-index: 2;
 	left: 95px;
-	top: 50%;
-	margin-top: -92.5px;
 	text-transform: uppercase;
 	color: #fff;
 	line-height: 35px;
@@ -234,7 +332,7 @@ a{
     .cell;
 }
 
-.icons-wrapper .container{
+.icons-wrapper{
 	background-color: #ededed;
 	padding: 8px 0;
 }
@@ -252,22 +350,25 @@ a{
 
 .banner-img{
 	width: 100%;
-	height: 186px;
+	height: 235px;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: 50%;
 }
 .banners{
-	width: 33.3%;
+	width: 33.33%;
 	float: left;
 	position: relative;
 	overflow: hidden;
-	height: 186px;
+	height: 235px;
 }
 .banners-mask{
 	position: absolute;
 	z-index: 2;
 	top:0;
 	left: 0;
-	padding-left: 15px;
-	padding-top: 95px;
+	padding-left: 20px;
+	padding-top: 125px;
 	width: 100%;
 	height: 100%;
 	-webkit-transition: all 0.1s linear;
@@ -278,8 +379,8 @@ a{
 			text-transform: uppercase;
 			color: #fff;
 			font-family: 'helveticaneuecyrbold';
-			font-size: 20px;
-			padding-top: 10px;
+			font-size: 22px;
+			padding-top: 20px;
 			padding-bottom: 15px;
 		}
 
@@ -291,7 +392,7 @@ a{
 			   filter: progid:DXImageTransform.Microsoft.Alpha(enabled=false);
 			   opacity: 1;
 			   max-height: 400px;
-			   min-height: 95px;
+			   min-height: 125px;
 			   left: 0;
 			   -moz-transition: opacity 0.2s,left 0.3s,max-height 0.1s;
 			   -o-transition: opacity 0.2s,left 0.3s,max-height 0.1s;
@@ -308,8 +409,9 @@ a{
 
 .offer-list{
 	font-family: 'helveticaneuecyrlight';
-	font-size: 12px;
+	font-size: 14px;
 	margin: 10px 0;
+	margin-top: 15px;
 	position: relative;
    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
    opacity: 0;
@@ -324,8 +426,8 @@ a{
 
 		li{
 			position: relative;
-			margin-bottom: 8px;
-			margin-left: 30px;
+			margin-bottom: 10px;
+			margin-left: 12px;
 
 				&:hover:before{
 					background: url(../images/list-h.png)no-repeat;
@@ -353,16 +455,16 @@ a{
 }
 .show-link{
 	display: block;
-	width: 155px;
-	height: 25px;
+	width: 180px;
+	height: 30px;
 	padding-left: 10px;
 	text-transform: uppercase;
 	color: #fff;
-	line-height: 25px;
+	line-height: 30px;
 	font-family: 'helveticaneuecyrlight';
-	font-size: 14px;
+	font-size: 16px;
 	text-shadow: 0px 1px 0px rgba(0, 0, 0, 0.35);
-	background: @grey url(../images/show-drop.png)no-repeat 97% 6px;
+	background: @grey url(../images/show-drop.png)no-repeat 97% 8px;
 }
 
 .about-company{
@@ -379,6 +481,8 @@ a{
 .offer-banners{
 	padding-bottom: 10px;
 	border-bottom: 1px solid #dddcdc;
+	width: 100%;
+	min-width: 1000px;
 }
 
 .info-text{
