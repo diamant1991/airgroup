@@ -37,38 +37,29 @@ a {
 .nav-wrap {
   margin-left: 310px;
   padding-left: 25px;
+  position: relative;
 }
 .nav-wrap > ul > li {
   float: left;
   padding-right: 30px;
   height: 60px;
 }
-.nav-wrap > ul > li:first-child a:hover:after,
-.nav-wrap > ul > li:nth-child(2) a:hover:after,
-.nav-wrap > ul > li:first-child a.active:after,
-.nav-wrap > ul > li:nth-child(2) a.active:after {
-  width: 60px;
+.nav-wrap > ul > li:hover > a,
+.nav-wrap > ul > li.active > a {
+  border-bottom: 2px solid #ed1c24;
 }
-.nav-wrap > ul > li:last-child a:hover:after,
-.nav-wrap > ul > li:last-child a:active:after {
-  left: 6px;
+.nav-wrap > ul > li.active .nav {
+  display: block;
+}
+.nav-wrap > ul > li:hover .nav {
+  display: block;
 }
 .nav-wrap > ul > li > a {
   color: white;
   display: block;
-  height: 60px;
+  height: 45px;
   line-height: 60px;
   position: relative;
-}
-.nav-wrap > ul > li > a:hover:after,
-.nav-wrap > ul > li > a.active:after {
-  content: "";
-  display: block;
-  position: absolute;
-  width: 90px;
-  height: 4px;
-  bottom: 14px;
-  background: url(../images/line.png) no-repeat;
 }
 .bot-header {
   width: 100%;
@@ -86,11 +77,15 @@ a {
   z-index: 2;
 }
 .nav {
-  margin-left: 305px;
+  /* margin-left: 305px; */
+  position: absolute;
+  left: 0;
+  top: 60px;
   display: none;
-}
-.nav:hover {
-  display: block !important;
+  /* &:hover{
+			display: block !important;
+		} */
+
 }
 .nav > ul {
   line-height: 1.1;
@@ -416,18 +411,22 @@ a {
   -webkit-transition: left 0.3s, max-height 0.1 d;
   transition: left 0.3s, max-height 0.1 d;
 }
-.offer-list li {
+.offer-list > ul > li {
+  width: 50%;
+  float: left;
+}
+.offer-list .list-child li {
   position: relative;
   margin-bottom: 10px;
   margin-left: 12px;
 }
-.offer-list li:hover:before {
+.offer-list .list-child li:hover:before {
   background: url(../images/list-h.png) no-repeat;
 }
-.offer-list li:hover a {
+.offer-list .list-child li:hover a {
   text-decoration: none;
 }
-.offer-list li:before {
+.offer-list .list-child li:before {
   content: '';
   display: block;
   width: 5px;
@@ -437,7 +436,7 @@ a {
   top: 4px;
   position: absolute;
 }
-.offer-list li a {
+.offer-list .list-child li a {
   color: white;
   text-decoration: underline;
 }

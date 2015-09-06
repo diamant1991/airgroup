@@ -49,7 +49,7 @@ a{
 .nav-wrap{
 	margin-left: 310px;
 	padding-left: 25px;
-
+	position: relative;
 
 		> ul{
 
@@ -57,34 +57,28 @@ a{
 			float: left;
 			padding-right: 30px;
 			height: 60px;
+
+				&:hover > a,
+				&.active > a{
+					border-bottom: 2px solid #ed1c24;
+				}
+				&.active .nav{
+					display: block;
+				}
+
+				&:hover .nav{
+					display: block;
+				}
 			
-				&:first-child a:hover:after,
-				&:nth-child(2) a:hover:after,
-				&:first-child a.active:after,
-				&:nth-child(2) a.active:after{
-					width: 60px;
-				}
-				&:last-child a:hover:after,
-				&:last-child a:active:after{
-					left: 6px;
-				}
 				> a{
 					color: #fff;
 					display: block;
-					height: 60px;
+					height: 45px;
 					line-height: 60px;
 					position: relative;
 
-						&:hover:after,
-						&.active:after{
-							content: "";
-							display: block;
-							position: absolute;
-							width: 90px;
-							height: 4px;
-							bottom: 14px;
-							background: url(../images/line.png)no-repeat;
-						}
+						
+
 				}
 		}
 		}
@@ -111,11 +105,14 @@ a{
 
 
 .nav{
-	margin-left: 305px;
+	/* margin-left: 305px; */
+	position: absolute;
+	left:0;
+	top: 60px;
 	display: none;
-		&:hover{
+		/* &:hover{
 			display: block !important;
-		}
+		} */
 
 		> ul{
 			line-height: 1.1;
@@ -448,8 +445,13 @@ a{
    -webkit-transition: left 0.3s,max-height 0.1d;
    transition: left 0.3s,max-height 0.1d;
 
+   	> ul >li{
+   		width:50%;
+   		float:left;
+   	}
 
-		li{
+		.list-child{
+			li{
 			position: relative;
 			margin-bottom: 10px;
 			margin-left: 12px;
@@ -477,6 +479,8 @@ a{
 					text-decoration: underline;
 				}
 		}
+		}
+		
 }
 .show-link{
 	display: block;
