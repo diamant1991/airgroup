@@ -668,7 +668,7 @@
 	</div>
 </div>
 
-<section class="category">
+<section class="category item-category">
 	<div class="container">
 		<div class="page-header__title page-header__title_has-nav">
 			 <div class="sidebars xsa-display-block">
@@ -678,7 +678,7 @@
 			 	   </h1>
 				</div>
 				 <div class="sidebars__item vertical-align-bottom">
-				 	<div class="tabs-nav tabs-nav_single">
+				 	<div class="tabs-nav tabs-nav_single" style="opacity: 1;">
 				 		<div class="tabs-nav__item">
 				 			<a class="tabs-nav__item__link" href="#">
 				 				Архів тарифів 
@@ -702,19 +702,16 @@
 			<div class="tabs-layer">
 				 <ul class="nav-tabs nav-tabs_style-1">
 					 <li class="active">
-					 	 <a data-toggle="tab" href="#terms">Умови</a>
+					 	 <a onclick="opcl(mydivs,'#terms'); return false;">Умови</a>
 					 </li>
 					 <li>
-					 	<a data-toggle="tab" href="#tab-18">3G Інтернет</a>
+					 	<a onclick="opcl(mydivs,'#tab-18'); return false;">3G Інтернет</a>
 					 </li>
 					 <li>
-					 	<a data-toggle="tab" href="#description">Детальна інформація</a>
+					 	<a onclick="opcl(mydivs,'#description'); return false;">Детальна інформація</a>
 					 </li>
 					 <li>
-					 	<a data-toggle="tab" href="#connection">Як підключити</a>
-					 </li>
-					 <li>
-					 	<a data-toggle="tab" href="#settings">Налаштування</a>
+					 	<a onclick="opcl(mydivs,'#connection'); return false;">Як підключити</a>
 					 </li>
 				 </ul>
 				 <div class="nav-tabs-toggle">
@@ -724,7 +721,7 @@
 
 			<div class="tab-content">
 				<div class="page-columns page-columns_has-right">
-					<div class="tab-pane" id="terms">
+					<div class="tab-pane clearfix" id="terms">
 						<h3 class="main-h3">Послуги в тарифі</h3>
 						<div class="tariff-servises-list clearfix row">
 							 <div class="col-md-6 col-sm-6">
@@ -783,14 +780,225 @@
 							 </div>
 					 	</div>
 					</div>
+					<div class="tab-pane clearfix" id="tab-18">
+						<h3 class="main-h3">Отримуйте доступ до 3G швидкості з послугою «3G Безліміт»</h3>
+						<ul class="my-ul">
+							<li>Швидкісний мобільний Інтернет - до 7,2 Мбіт/сек, а в подальшому до 42 Мбіт/сек!</li>
+							<li>3G покриття у всіх обласних центрах країни і великих містах!</li>
+							<li>Використання всіх можливостей швидкісного безлімітного 3G Інтернету без зміни номера, SIM-картки або тарифів!</li>
+							<li>Розважальний контент на сайті <a href="http://www.3g.mts.ua" target="_blank">3G.MTS.UA</a></li>
+						</ul>
+
+
+						<table class="stack-table table-invert text-size-base-lg line-height-sm stacktable large-only">
+							<tbody>
+								<tr class="reset-child-border reset-child-padding-top">
+									<th class="text-size-h4 text-center">Вартість</th>
+									<th class="text-size-h4 text-center">Термін дії</th>
+									<th class="text-size-h4 text-center">Підключити</th>
+									<th class="text-size-h4 text-center">Перевірити</th>
+									<th class="text-size-h4 text-center">Відключити</th>
+								</tr>
+								<tr>
+									<td class="text-size-lg vertical-align-middle text-center">
+										<span class="text-size-h4 color-red text-center">
+											<span class="text-size-h4 color-red">50 </span>
+										</span>грн
+									</td>
+									<td class="color-gray vertical-align-middle text-center">
+										<span class="text-size-h4 color-red"> 30 </span>днів
+									</td>
+									<td class="text-size-lg vertical-align-middle text-center">
+										<span class="text-marked">*888# 
+											<span class="icon icon-call">&nbsp;</span>
+										</span>
+									</td>
+									<td class="color-gray vertical-align-middle text-center">
+										<span class="text-marked">*888*8# 
+											<span class="icon icon-call">&nbsp;</span>
+										</span>
+									</td>
+									<td class="color-gray vertical-align-middle text-center">
+										<span class="text-marked">*888*0# 
+											<span class="icon icon-call">&nbsp;</span>
+										</span>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+						<p>Для абонентів які підключили послугу «3G Безліміт» починаючи з 1.08.2015, вона буде діяти на постійній основі!<br> Перепідключення послуги, зняття плати за користування та оновлення обсягу інтернет-трафіку в рамках послуги «3G Безліміт» відбуватиметься щомісяця з моменту замовлення, з урахуванням дати підключення.<br> <br> Щомісячний платіж за користування послугою знімається також у випадках, коли його сума перевищує залишок на рахунку. Використання послуги можливо тільки при позитивному балансі.</p>
+						<p>Послуга надається на базі національного роумінгу з «ТриМоб», а надалі в мережі 3G МТС, доступ до якої здійснюється при підключенні послуги «3G Безліміт» - єдина послуга для двох 3G мереж!</p>
+						<p>Для використання послуг зв'язку по закінченню терміну дії послуги «3G Безліміт» або при відсутності сигналу мережі ТриМоб, необхідно в ручному режимі вибрати мережу МТС. Після вичерпання 2500 мегабайт на 30 днів у мережі ТриМоб та МТС у межах послуги «3G Безліміт», швидкість мобільного Інтернету складатиме 150 Кбіт/сек</p>
+						<h3 class="main-h3">Налаштувати 3G - це просто!</h3>
+						<ol>
+							<li>Для використання послуги Вам потрібен телефон з підтримкою 3G, UMTS / HSDPA.</li>
+							<li>У меню телефону необхідно вибрати один з варіантів режиму мережі «3G» або «3G / 2G».</li>
+							<li>Далі включити режим передачі даних в роумінгу на телефоні.</li>
+							<li>У меню телефону в ручному режимі вибрати один з варіантів назви мережі:</li>
+							<li>Trimob / UKR 07 / Ukrtelecom 07 / Ukrtelecom / 255 07.</li>
+							<li>Перевірити, чи встановлена в налаштуваннях телефону одна з точок доступу (internet, www.mts.ua, www.umc.ua)</li>
+						</ol>
+						<p>Тарифи вказані в гривнях з урахуванням ПДВ та збору до Пенсійного фонду, який становить 7,5% від вартості послуг без ПДВ, станом на 06.04.2015.</p>
+					</div>
+
+					<div class="tab-pane clearfix" id="description">
+						<h3 class="main-h3">Особливості користування тарифом «Смартфон 3G Одеський»</h3>
+						<p>Умови тарифу діють після першого поповнення рахунку на суму від 40 грн одним платежем. Підключення відбувається протягом 24 годин після поповнення, по факту підключення Ви отримаєте SMS: “Послуга «2 Безліміти на місяць» підключена”. Звертаємо Вашу увагу, що враховуються всі види поповнень, крім поповнень за допомогою послуги «Переказ грошей».</p>
+						<p>Вартість 2 Безлімітів на місяць – 10 грн, платіж знімається під час підключення послуги і в подальшому щомісячно з урахуванням дати підключення.</p>
+						<p>Додатково Ви маєте можливість перейти на щоденну оплату – 0,50 грн за два безліміти, у межах послуги «2 Безліміти на день», набравши комбінацію <span class="text-marked text-marked_sm">*101*501</span> . Щоденна плата почне зніматись після закінчення дії послуги «2 Безліміти на місяць», яка підключається після активації. стартового пакету. Зворотній перехід на послугу «2 Безліміти на місяць» — <span class="text-marked text-marked_sm">*101*530#<span class="icon icon-call">&nbsp;</span></span>.</p>
+						<p>Перевірка терміну дії послуги -<span class="text-marked text-marked_sm">*101*4#<span class="icon icon-call">&nbsp;</span></span>. Перевірка статусу послуг — <span class="text-marked text-marked_sm">*101*531#<span class="icon icon-call">&nbsp;</span></span>.</p>
+						<p>Вищезазначені послуги не діють за умови підключення послуги <a href="http://www.mts.ua/ua/services/dlya-ekonomii/zvonki/god-bez-abonplat-v-smartphon-3/">«Рік без Абонплат»</a>.</p>
+
+						<div class="accordions-wrapper">
+						<div class="accordion accordion_lg">
+							<div data-toggle="collapse" data-target="#accordion-info-50" class="accordion__title on-collapse collapsed" aria-expanded="true">Територія дії тарифу
+								<div class="icon icon-pointer-down brand-red on-collapse-show">&nbsp;</div>
+								<div class="icon icon-pointer-up brand-red on-collapse-hide">&nbsp;</div>
+							</div>
+							<div id="accordion-info-50" class="accordion__content collapse" aria-expanded="false">
+							<div class="content-block">Тариф діє на території Одеської області. Додатковий платіж за збереження умов тарифу в Донецькій, Луганській, Полтавській, Сумській та Херсонській областях — 1,00 грн/день, в інших областях — 0,50 грн/день у разі здійснення дзвінка в мережі МТС або на інші мережі України.</div>
+							</div>
+						</div>
+					</div>
+
+					<p>У разі відсутності першого поповнення рахунку на 40 грн одним платежем діють такі тарифи: дзвінки абонентам МТС - 1,00 грн /хв, дзвінки абонентам інших операторів України - 1,50 грн/хв, SMS/MMS абонентам по Україні - 1,00 грн/шт. Базовий мобільний Інтернет - Безліміт за 3,00 гривні в день, тільки в разі користування.</p>
+					<p>У вартість стартового пакета та&nbsp;в перелік послуг тарифного плану входить мелодія &nbsp;<a href="http://mts.ua/ua/services/razvlecheniya/muzyka/good-ok">GOODOK</a>&nbsp;строком на&nbsp;30&nbsp;днів з&nbsp;моменту активації стартового пакета. Після закінчення даних 30&nbsp;днів строк дії такої мелодії буде автоматично подовжуватися кожні 30&nbsp;днів, якщо абонент не&nbsp;відмовиться від мелодії до&nbsp;моменту вичерпання перших або кожних наступних 30&nbsp;днів надання послуги. При цьому після закінчення перших 30&nbsp;днів надання послуги починає стягуватися плата за&nbsp;користування послугою у&nbsp;розмірі 11,69&nbsp;грн (з&nbsp;ПДВ та&nbsp;ПФ) до&nbsp;моменту самостійної відмови від мелодії. Плата за&nbsp;користування послугою нараховується по&nbsp;дату її&nbsp;фактичного використання і&nbsp;підлягає оплаті в&nbsp;повному обсязі. Для відмови від послуги необхідно відправити SMS з&nbsp;текстом OFF на&nbsp;номер&nbsp;700.</p>
+					<div class="separator"></div>
+
+					<div class="accordions-wrapper">
+						<div class="accordion accordion_lg">
+							<div data-toggle="collapse" data-target="#accordion-info-0" class="accordion__title on-collapse collapsed" aria-expanded="false">Підключайте послугу «Рік без Абонплат»
+								<div class="icon icon-pointer-down brand-red on-collapse-show">&nbsp;</div>
+								<div class="icon icon-pointer-up brand-red on-collapse-hide">&nbsp;</div>
+							</div>
+							<div id="accordion-info-0" class="accordion__content collapse" aria-expanded="false">
+								<div class="content-block">
+								<p>Отримуйте 2 Безліміти на рік, сплативши один раз авансом, замість 10 грн щомісячно!</p>
+								<p>Період підключення послуги з 06 квітня 2015 до 31 грудня 2015 року. Послуга діє 365 днів з моменту її підключення.&nbsp; Платіж за послугу знімається під час її підключення. за услугу. Перевірка статусу и терміну дії послуги&nbsp; «Рік без Абонплат»&nbsp;&nbsp; — <span class="text-marked">*365*1# <span class="icon icon-call">&nbsp;</span>. </span></p>
+								<p>На період дії послуги зняття щомісячних платежів за послугою «2 безліміти на місяць» або щоденних платежів за послугою «2 безліміти на день» припиняється. При переході в інший тариф дію послуги «Рік без абонплат» припиняється.</p>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="accordions-wrapper">
+						<div class="accordion accordion_lg">
+							<div data-toggle="collapse" data-target="#accordion-info-5" class="accordion__title on-collapse collapsed" aria-expanded="true">Роумінг та Дзвінки за&nbsp;кордон
+								<div class="icon icon-pointer-down brand-red on-collapse-show">&nbsp;</div>
+								<div class="icon icon-pointer-up brand-red on-collapse-hide">&nbsp;</div>
+							</div>
+							<div id="accordion-info-5" class="accordion__content collapse" aria-expanded="true">
+								<div class="content-block">
+									<ul class="my-ul">
+									<li>В тарифі&nbsp; безкоштовно включена послуга «0&nbsp;за&nbsp;кордон», яка дає Вам можливість дзвонити безкоштовно в&nbsp;рамках перших 10&nbsp;хвилин в&nbsp;день. Повний перелік країн та&nbsp;детальний опис умов тарифікації в&nbsp;розділі опису послуги&nbsp;— <a class="display-inline-block" href="http://www.mts.ua/ua/services/dlya-ekonomii/zvonki/0-za-granicu/">«0&nbsp;за&nbsp;кордон»</a>.</li>
+								<li>В тарифі безкоштовно включена послуга <a class="display-inline-block" href="http://mts.ua/ua/services/pakety-dlya-ekonomii/rouming/super-internet-v-rouminge">«Супер Інтернет у&nbsp;роумінгу»</a>, з&nbsp;якою Ви&nbsp;отримаєте Інтернет в&nbsp;Росії та&nbsp;в Європі всього за&nbsp;30 гривень в&nbsp;день користування! Платиш тільки коли користуєшся!&nbsp;Детальний опис умов тарифікації та&nbsp;використання в&nbsp;розділі опису послуги&nbsp;— <a class="display-inline-block" href="http://mts.ua/ua/services/pakety-dlya-ekonomii/rouming/super-internet-v-rouminge">«Супер Інтернет у&nbsp;роумінгу»</a>.</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+					<p>Тарифи вказані в гривнях з урахуванням ПДВ та збору до Пенсійного фонду, який становить 7,5% від вартості послуг без ПДВ, станом на 06.04.2015.<br> Вартість дзвінків вказана за першу секунду кожної хвилини розмови.</p>
+					<p>З 15.06.15 тариф закритий для підключення та користування на території Львівської області.</p>
+					<p>Детальну інформацію про тарифи, акції, вартість та умови надання послуг можна отримати на <a href="http://www.mts.ua">www.mts.ua</a>, <a href="http://www.3g.mts.ua">www.3g.mts.ua</a> або за телефонами:</p>
+					<ul class="my-ul">
+						<li>111 - безкоштовно з мобільного МТС в Україні;</li>
+						<li>555 - прямий зв'язок з оператором - платно (0,50 грн за дзвінок з ПДВ та ПФ) для абонентів МТС в Україні;</li>
+						<li>0 800 40 0000 - консультація щодо тарифів і послуг МТС для абонентів інших операторів України (безкоштовно з будь-якого номера в Україні)</li>
+					</ul>
+
+					</div>
+
+					<div class="tab-pane tariff-connection-tab-pane" id="connection">
+						<h3 class="main-h3">Як підключити «Смартфон 3G Одеський»</h3>
+						<div class="margin-bottom-md">
+							<div class="row">
+								<div class="col-md-6">
+									<div class="margin-bottom-sm">
+									<div class="content-block">
+									<p>Придбайте стартовий пакет з тарифом «Смартфон 3G Одеський» з новим мобільним номером або переходите в тариф з існуючим номером. Вартість стартового пакету - 20 грн, на основному грошовому рахунку - 1 грн.</p>
+									</div>
+									</div>
+									<a class="btn btn-primary" href="http://mts.ua/ru/support/referral-service/salescenters"> Купити
+									<div class="icon icon-pointer-right">&nbsp;</div>
+									</a>
+									<p>Перехід у тариф «Смартфон 3G&nbsp;Одеський» доступний абонентам МТС Передоплата. Для зміни тарифу достатньо скористатися системою «<a href="https://ihelper-prp.mts.com.ua/SelfCareUA/Logon" target="_blank">Мій МТС</a>» або зателефонувати за безкоштовним номером <span class="color-red">7722</span> та слідувати голосовим підказкам.<br> Можливість переходу на вказаний тариф уточнюйте у співробітників Центру обслуговування абонентів за номером <span class="color-red">111</span></p>
+								</div>
+								<div class="col-md-6">
+									<div class="margin-bottom-sm">
+									<div class="content-block">
+									<p>Після отримання SMS про перехід в тариф «Смартфон 3G Одеський» необхідно поповнити рахунок на суму від 40 грн одним платежем (крім послуги «Переказ грошей») для підключення умов тарифу.</p>
+									</div>
+									</div>
+									<button class="btn btn-primary" data-target="#tariff-activation-modal" data-toggle="modal"> Підключити</button>
+									<div class="icon icon-pointer-right">&nbsp;</div>
+								</div>
+							</div>
+						</div>
+						<div class="clear"></div>
+						<div class="content-block"><p>Для абонентів тарифу «Просто Супер Одеський»&nbsp; перехід у тариф «Смартфон 3G Одеський» — безкоштовний. Для абонентів &nbsp;тарифів &nbsp;«Супер МТС 3Д Нуль 35 Без Абонплат», «Смартфон 0.50»&nbsp; та «Смартфон 3G». Вартість переходу становить 20 грн, перша зміна тарифу протягом 30 днів після першого дзвінка - безкоштовно.</p></div>
+					</div> 	
+
 				</div>
 			</div>
 		</div> 	
 
-
+		
 	</div>
 </section>
 
+<footer class="footer">
+	<div class="container clearfix">
+		<div class="foot-list">
+			<ul class="clearfix">
+				<li>
+					<a href="#" class="link"><h4>Сервис</h4></a>
+					<ul>
+						<li><a href="#">Производители</a></li>
+						<li><a href="#">Оборудование</a></li>
+						<li><a href="#">Сервис и гарантия</a></li>
+						<li><a href="#">Услуги</a></li>
+					</ul>
+				</li>
+				<li>
+					<a href="#" class="link"><h4>Монтаж</h4></a>
+					<ul>
+						<li><a href="#">Производители</a></li>
+						<li><a href="#">Оборудование</a></li>
+						<li><a href="#">Сервис и гарантия</a></li>
+						<li><a href="#">Услуги</a></li>
+					</ul>
+				</li>
+				<li>
+					<a href="#" class="link"><h4>О компании</h4></a>
+					<ul>
+						<li><a href="#">Производители</a></li>
+						<li><a href="#">Оборудование</a></li>
+						<li><a href="#">Сервис и гарантия</a></li>
+						<li><a href="#">Услуги</a></li>
+					</ul>
+				</li>
+				<li>
+					<a href="#" class="link"><h4>Оборудование</h4></a>
+					<ul>
+						<li><a href="#">Производители</a></li>
+						<li><a href="#">Оборудование</a></li>
+						<li><a href="#">Сервис и гарантия</a></li>
+						<li><a href="#">Услуги</a></li>
+					</ul>
+				</li>
+			</ul>
+		</div>
+		<div class="copyright">
+			<p>Разработка сайта- WED-студия "DUBL"</p>
+			<p>© 2013 AirGroup</p>
+			<div class="rambler">
+				<a href="#">
+					<img src="images/rambler.png" height="31" width="130" alt="">
+				</a>
+			</div>
+		</div>
+	</div>
+</footer>
 
 
 <script src="js/jquery.js"></script>

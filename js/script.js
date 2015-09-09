@@ -1,3 +1,17 @@
+var mydivs=new Array('#terms','#tab-18', '#description', '#connection');
+
+function opcl(arr, e){
+    if ($(e).css('display') == 'none'){
+        for(var i in arr){   
+           $(arr[i]).hide();     
+        }
+        $(e).show();       
+    }
+}
+
+
+
+
 $(document).ready(function() {
 	/*$('.nav-wrap li').hover(function() {
 		$(this).find('.nav.visible').slideDown(300)
@@ -39,6 +53,19 @@ $(document).ready(function() {
 		$('.nav-toggle li.opened').addClass('active');
 	});
 
+	$('.accordion__title').click(function(event) {
+		$(this).find('.icon-pointer-down').toggleClass('rotate');
+		$(this).toggleClass('collapsed');
+		$(this).parent().find('.accordion__content').stop().slideToggle(300)
+	});
+
+	$('.nav-tabs li').click(function(event) {
+		$('.nav-tabs li').removeClass('active');
+		$(this).addClass('active')
+	});
+
 });
+
+
 
 
